@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix' => 'Admin', 'namespace' => 'Admin'], function (){
+    Route::any('home/login','HomeController@login');
+});
+
+
