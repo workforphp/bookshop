@@ -17,10 +17,14 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'Admin', 'namespace' => 'Admin'], function (){
     Route::any('home/login','HomeController@login');
+    Route::any('home/register','HomeController@register');
+    Route::any('home/forget-pwd','HomeController@forgetPwd');
 });
 
-//Route::any('login','HomeController@login');
-Route::any('register','Admin\AdminController@register');
-Route::any('info','Admin\UserController@info');
-Route::any('my','Admin\BaseController@my');
-
+////Route::any('login','HomeController@login');
+//Route::any('register','Admin\AdminController@register');
+//Route::any('info','Admin\UserController@info');
+//Route::any('my','Admin\BaseController@my');
+//Route::any('register','Admin\AdminController@register');
+//Route::any('info','Admin\UserController@info');
+//Route::any('my','Admin\BaseController@my');
