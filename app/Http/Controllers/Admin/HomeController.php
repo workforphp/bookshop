@@ -28,15 +28,11 @@ class HomeController extends BaseController
 
     public function checkLogin(Request $request)
     {
-//        if($request->getMethod() == 'post'){
-//            return 123;
-//        }
         if($request->ajax()){
             $username = $request->input('username');
             $password = $request->input('password');
             $valid = $request->input('captcha');
             $verify = session('valid');
-//            $verify;
             $return['verify'] = $verify;
             if($valid == $verify){
                 $return['result'] = 1;
@@ -60,8 +56,6 @@ class HomeController extends BaseController
         $builder = new CaptchaBuilder();
         $builder->build($width = 150, $height = 40);
         $phrase = $builder->getPhrase();
-//        session(['valid' => $phrase]);
-//        Session::flash('valid',$phrase);
         session(['valid' => $phrase]);
         $builder->output();
     }
