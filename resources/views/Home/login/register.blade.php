@@ -6,11 +6,13 @@
     <title>@yield('title','会员注册')</title>
     <meta name="keywords" content="某某科技" />
     <meta name="description" content="某某科技" />
+    @section('css')
     <link href="{{url('css/layout.css')}}" rel="stylesheet" type="text/css">
     <link href="{{url('css/login.css')}}" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="{{url('js/jquery-1.7.2.min.js')}}"></script>
     <script type="text/javascript" src="{{url('js/js.js')}}"></script>
     <script type="text/javascript" src="{{url('js/jquery.cookie.js')}}"></script>
+    @show
 </head>
 
 <body class="login-bg">
@@ -45,7 +47,7 @@
             <a href="{{action('Admin\HomeController@forgetPwd')}}" class="forget-pwd text-small fl">忘记登录密码？</a>
             <a href="{{url('Admin/home/login')}}" class="forget-new text-small fr" id="forger-login">已有账号，立即登录</a>
         </div>
-        @show()
+        @show
     </div>
     <div class="footer text-center  text-small">
         Copyright 2013-2016 某某科技有限公司 版权所有 <a href="#" target="_blank">滇ICP备13005806号</a>
@@ -137,7 +139,7 @@
             }
         }, 1000);
     }
-    @show()
+    @show
 </script>
 </body>
 

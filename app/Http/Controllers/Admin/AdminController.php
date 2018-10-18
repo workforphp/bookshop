@@ -5,8 +5,10 @@ use App\Http\Controllers\Admin\BaseController;
 
 class AdminController extends BaseController
 {
-    public function register()
+    public function getInfo()
     {
         return '这是注册页面';
     }
+
+
 }

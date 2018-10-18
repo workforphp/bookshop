@@ -2,9 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8">
-        <title>@yield('title')</title>
+        <title>@yield('title','后台首页')</title>
     @section('css')
-        <meta name="keywords" content=@yield($keywords,'大气,黑色,常用,后台管理,网站模板') />
+        <meta name="keywords" content='大气,黑色,常用,后台管理,网站模板' />
         <meta name="description" content="大气黑色常用后台管理网站模板下载，框架已搭好，自定义填充模板类型。" />
         <link rel="stylesheet" type="text/css" href="{{url('css/identify.css')}}" />
         <link rel="stylesheet" type="text/css" href="{{url('css/layout.css')}}" />

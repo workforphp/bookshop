@@ -16,9 +16,22 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'Admin', 'namespace' => 'Admin'], function (){
-    Route::any('home/login','HomeController@login');
-    Route::any('home/register','HomeController@register');
-    Route::any('home/forget-pwd','HomeController@forgetPwd');
+//    Route::any('home/login','HomeController@login');
+//    Route::any('home/register','HomeController@register');
+//    Route::any('home/forget-pwd','HomeController@forgetPwd');
+
+    Route::group(['prefix' => 'home'], function(){
+        Route::any('login','HomeController@login');
+        Route::any('register','HomeController@register');
+        Route::any('forget-pwd','HomeController@forgetPwd');
+        Route::any('get-captcha/{tmp}', 'HomeController@getCaptcha');
+        Route::any('check-login/', 'HomeController@checkLogin');
+        Route::any('index/', 'HomeController@index');
+    });
+
+    Route::group(['prefix' => 'user'], function (){
+        Route::any('get-info',"UserController@getInfo");
+    });
 });
 
 ////Route::any('login','HomeController@login');

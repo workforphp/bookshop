@@ -6,8 +6,8 @@ return [
 
     'default'   => [
         'length'    => 5,
-        'width'     => 120,
-        'height'    => 36,
+        'width'     => 152,
+        'height'    => 40,
         'quality'   => 90,
     ],
 
