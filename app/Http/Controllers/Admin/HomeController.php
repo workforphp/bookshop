@@ -48,7 +48,8 @@ class HomeController extends BaseController
 
     public function index()
     {
-        return view('Home/index',['title' => '网站首页']);
+//        return view('Home/index',['title' => '网站首页']);
+        return view('Home/home/index');
     }
 
     public function getCaptcha($tmp)

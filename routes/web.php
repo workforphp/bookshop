@@ -29,6 +29,15 @@ Route::group(['prefix' => 'Admin', 'namespace' => 'Admin'], function (){
         Route::any('index/', 'HomeController@index');
     });
 
+    Route::group(['prefix' => 'shop'], function (){
+        Route::any('register', 'ShopController@register');
+        Route::any('login', 'ShopController@login');
+    });
+
+    Route::group(['prefix' => 'admin'], function(){
+        Route::any('index', 'AdminController@index');
+    });
+
     Route::group(['prefix' => 'user'], function (){
         Route::any('get-info',"UserController@getInfo");
     });
