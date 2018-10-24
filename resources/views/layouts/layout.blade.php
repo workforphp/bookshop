@@ -7,6 +7,7 @@
         <meta name="keywords" content='大气,黑色,常用,后台管理,网站模板' />
         <meta name="description" content="大气黑色常用后台管理网站模板下载，框架已搭好，自定义填充模板类型。" />
         <link rel="stylesheet" type="text/css" href="{{url('css/identify.css')}}" />
+        <link rel="stylesheet" type="text/css" href="{{url('css/bootstrap.css')}}" />
         <link rel="stylesheet" type="text/css" href="{{url('css/layout.css')}}" />
         <link rel="stylesheet" type="text/css" href="{{url('css/style.css')}}" />
         <link rel="stylesheet" type="text/css" href="{{url('css/control_index.css')}}" />

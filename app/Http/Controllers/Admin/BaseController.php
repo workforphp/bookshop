@@ -14,13 +14,16 @@ class BaseController extends Controller
     {
         $this->mid = (int)request('mid');
         $this->sid = (int)request('sid');
+        $this->aid = (int)request('aid');
 //        $this->sid = $request->input('sid');
     }
 
-    public function responseMsg($code,$msg,$data)
+    public function responseMsg($code = 0,$msg = '',$data = [])
     {
+        if(!$msg){
+            $msg = toMsg($code);
+        }
         $json = json_encode(compact('code','msg','data'),JSON_UNESCAPED_UNICODE);
-//        echo response($json);
         echo $json;
         exit;
     }

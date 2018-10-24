@@ -36,6 +36,9 @@ Route::group(['prefix' => 'Admin', 'namespace' => 'Admin'], function (){
 
     Route::group(['prefix' => 'admin'], function(){
         Route::any('index', 'AdminController@index');
+        Route::any('add', 'AdminController@add');
+        Route::any('edit', 'AdminController@edit');
+        Route::any('get-msg', 'AdminController@getMsg');
     });
 
     Route::group(['prefix' => 'user'], function (){

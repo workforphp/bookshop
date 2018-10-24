@@ -46,27 +46,29 @@
 
 @section('js')
     @parent()
-    function re_captcha() {
-        $url = "{{url('Admin/home/get-captcha')}}";
-        $url = $url + "/" + Math.random();
-        document.getElementById('captcha').src = $url;
-    }
-    $('#lg').on('click',function(){
-        $.ajax({
-            url : '{{url('Admin/home/check-login')}}',
-            type : 'POST',
-            data : $('form').serialize(),
-            datatype : 'json',
-            success : function(data){
-                    var value = $.parseJSON(data);
-                    if(value.result == 1){
-                        alert(value.msg);
-                        window.location="{{url('Admin/home/index')}}";
-                    }else{
-                        alert(value.msg);
-                    }
-            }
-        })
-    });
+    <script type="text/javascript">
+        function re_captcha() {
+            $url = "{{url('Admin/home/get-captcha')}}";
+            $url = $url + "/" + Math.random();
+            document.getElementById('captcha').src = $url;
+        }
+        $('#lg').on('click',function(){
+            $.ajax({
+                url : '{{url('Admin/home/check-login')}}',
+                type : 'POST',
+                data : $('form').serialize(),
+                datatype : 'json',
+                success : function(data){
+                        var value = $.parseJSON(data);
+                        if(value.result == 1){
+                            alert(value.msg);
+                            window.location="{{url('Admin/home/index')}}";
+                        }else{
+                            alert(value.msg);
+                        }
+                }
+            })
+        });
+    </script>
 @endsection()
 

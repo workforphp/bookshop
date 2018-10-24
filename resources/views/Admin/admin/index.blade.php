@@ -118,7 +118,7 @@
 @endsection()
 
 @section('content')
-<h3>新的内容</h3>
+<h3>主页的新内容</h3>
 @endsection()
 
 @section('js')
@@ -131,12 +131,6 @@
                 }else{
                     $('.none').eq(num).css('display','none');
                 }
-                // $('.none').eq(num).css('display','block');
-                // alert($(this).index('.nav'));
-                // alert($(this).find('ul').css('display'));
-                // if($('.sidebar-nav a').css('display'))
-                // $('.sidebar-nav ul').css('display','block');
-                // alert('123');
             });
         });
 
